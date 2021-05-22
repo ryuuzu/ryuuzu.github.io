@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Puts a default character set for the whole webpage -->
+    <meta charset="UTF-8">
+    <!-- Provides support for old browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Author metadata -->
+    <meta name="author" content="Utsav Gurmachhan Magar">
+    <!-- Keywords for the search engine -->
+    <meta name="keyword" content="Islington Coursework InformationSystems Coursework3 blog technology">
+    <!-- Helps to get the device width metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the external CSS from the css folder -->
+    <link rel="stylesheet" href="/cw3/css/style.css">
+    <!-- For getting the fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&family=Material+Icons&display=swap"
+        rel="stylesheet">
+    <!-- Title of the webpage -->
+    <script src="/cw3/js/main.js"></script>
+    <!-- Loads the script file from the js folder -->
+    <title>UGM - Blog</title>
+    <!-- Internal CSS -->
+    <style>
+        /* Removes the styles from the anchor tag */
+        .introduction a,
+        .body a {
+            color: #070707;
+            text-decoration: none;
+        }
+
+        /* Sets Display to flex for the paragraph with figure */
+        .figpara {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Font-size for the figure caption */
+        figcaption {
+            font-size: 10px;
+        }
+
+        /* Different Styles for the heading */
+        .heading h1 {
+            font-size: 25px;
+            text-align: center;
+            font-family: Krona One;
+        }
+
+        .chart {
+            /* Makes sure the chart is inside the container div */
+            width: 100%;
+            /* Border for a little design :D */
+            border: #070707 1px solid;
+        }
+
+        .references li {
+            /* Aligns the references name to the left */
+            text-align: left;
+            /* Sets the font size for the references */
+            font-size: 11px;
+            /* Makes sure the list items are displayed properly */
+            display: list-item;
+        }
+
+        .ddbutton:hover {
+            /* Color when hovering over the dropdown button */
+            color: #878C8F;
+            /* For smooth transition */
+            transition: 0.5s;
+            /* Makes sure the cursor is pointer */
+            cursor: pointer;
+        }
+
+        .dropdown {
+            /* Hides the references at first */
+            display: none;
+        }
+
+        .dropdown.dropped {
+            /* Displays the references if the tag has both classes */
+            display: block;
+        }
+
+        /* Some basic responsiveness for the webpage on small screens */
+        @media screen and (max-width: 900px) {
+            .heading h1 {
+                font-size: 15px;
+            }
+
+            .references li {
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The header of the webpage -->
+    <header>
+        <!-- The sticky top navigation bar -->
+        <div class="mainNavBar">
+            <!-- mainLogo that calls a rick roll when clicked on -->
+            <h1 class="mainLogo" style="cursor: pointer;" onclick="playrr()">UGM</h1>
+            <!-- menu icon that opens or closes the sidebar based on the parameter sent -->
+            <h1 class="navOpener" id="openButton"><span class="material-icons" onclick="toggleNav('on')"
+                    style="cursor: pointer;">menu</span></h1>
+        </div>
+        <!-- The actual navigation side bar -->
+        <nav class="sideBar" id="sideBar">
+            <!-- A close button to close the side bar after opening it -->
+            <a href="javascript:void();" class="closeButton" onclick="toggleNav('off')"><span class="material-icons"
+                    style="font-size: 30px;">close</span></a>
+            <!-- Link to the respective pages -->
+            <a href="/cw3/index.html" onclick="toggleNav('off')">Home</a>
+            <a href="#" class="active" onclick="toggleNav('off')">Blog</a>
+            <a href="/cw3/pages/cv.html" onclick="toggleNav('off')">CV</a>
+            <a href="/cw3/pages/contact.html" onclick="toggleNav('off')">Contact</a>
+            <a href="/cw3/pages/research.html" onclick="toggleNav('off')">Research</a>
+        </nav>
+    </header>
+    <!-- The main section of the webpage -->
+    <main>
+        <!-- Totally not a div that has a rick roll -->
+        <div class="notarickroll" id="notarickroll">
+            <h4 style="font-family: Krona One; color: black;">No Pausing the video! All you can do is reload now :v</h4>
+            <!-- Video tag that sources the video file from the assests folder -->
+            <video id="rr">
+                <source src="/cw3/assets/epicvideo.mp4" type="video/mp4">
+            </video><br>
+            <!-- Link to the original Never Gonna Give You Up video <3 -->
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="font-family: Krona One;">Rick Astley ❤</a>
+        </div>
+        <!-- Div with the actually main contents of the webpage. -->
+        <div class="container">
+            <!-- The heading of the blog -->
+            <section class="heading">
+                <h1>Technology: A Daily Driver?</h1>
+            </section>
+            <!-- The introduction part for the blog -->
+            <section class="introduction">
+                <p>
+                    Technology has become a daily driver in our lives. On the <em>Review42</em> blog, Metev (2020)
+                    states that the average time spent on smartphones is 2hrs 51 mins a day, i.e. 171 mins per day <a
+                        href="#ref1">(Metev, 2020).</a> And this is just the average data, this doesn't count in the
+                    hours of time teenagers spend on social media apps like Tiktok, Instagram, Snapchat. Technology has
+                    become a must for many people these days. It not only helps them keep entertained but it also helps
+                    them be upto date with all the global news.
+                </p>
+            </section>
+            <!-- The body part of the blog -->
+            <section class="body">
+                <p>
+                    We all know that the world is still trying to recover from the global pandemic, <strong>Corona
+                        Virus</strong>, which affected people very badly and many companies had adapted to <em>Work From
+                        Home</em>. With this, there was a great increase in the laptop shipment worldwide. The total
+                    laptop shipment was 173 million units worldwide in 2019 <a href="#ref2">(Alsop, 2021).</a> But in
+                    2020, the total laptop shipment was 218 million units. That was an increase of 45 million units,
+                    almost 27%, than last year. This was one of the highest increase in the history. So, it could be
+                    considered as the result of the global pandemic as well. The pandemic has made us aware about how
+                    important techonology can be when needed and used in right way. If the technology wasn't as advanced
+                    as now, this global pandemic could have been the biggest threat to the humans just like meteorites
+                    to dinosaurs. Everything could go to extinct. We could be getting off-track here let's get back to
+                    the technological facts.
+                </p>
+                <!-- paragraph with figure -->
+                <div class="figpara">
+                    <p style="flex: 50%;">
+                        We don't depend on the technology only for work. We can also get the latest updates with it. An
+                        article by <a href="#ref3">Majid (2020)</a> states that The Epoch Times, a pro-Trump right-wing
+                        title, had a growth of 421% since December 2019 from 10.2m to 53.4m visits per month.
+                    </p>
+                    <!-- The chart from assets folder -->
+                    <figure style="flex: 50%;">
+                        <img src="/cw3/assets/chart.png" class="chart" alt="News Websites Growth Chart">
+                        <figcaption>Growth Chart: Press Gazette &bull; Source: SimilarWeb</figcaption>
+                    </figure>
+                    <p>Life isn't all about news and work. Entertainment also plays a big part in it. One of the biggest
+                        apps
+                        these days is, of course, <em>TikTok</em>. Tiktok is one of the fastest growing social media
+                        platforms
+                        in the work which presents an alternative version of online sharing. Tiktok has 689 million
+                        monthly
+                        active users worldwide <a href="#ref4">(Mohsin, 2021)</a>. It is not only about social media.
+                        People
+                        also play various games on their devices. At the time of writing this blog, the <em>SteamDB's
+                            data</em>
+                        show that the concurrent online steam users are 24,813,163 <a href="#ref5">(SteamDB, 2021)</a>.
+                    </p>
+                </div>
+            </section>
+            <!-- The conclusion of the blog -->
+            <section class="conclusion">
+                <p>
+                    In a nutshell, technology has become an important aspect of our daily life. It's not only about the
+                    handheld devices. Even TVs, fridges, cars, washing machines, etc. are getting smarter with the
+                    advancement of the technology. The future of these technologies can go even farther then the current
+                    level. All we can do is sit back and watch what the researchers and developers can do or become one
+                    of them and become a part of this great journey.
+                </p>
+            </section>
+            <!-- The references of the blog -->
+            <section class="references">
+                <!-- A toggle for the dropdown effect on the figure -->
+                <h3 class="ddbutton" id="ddbutton" onclick="toggleDrop()">References</h3>
+                <ol class="dropdown" id="dropdown">
+                    <li id="ref2">Alsop T. (2021) 'Forecast: global shipment of tablets, laptops and desktop PCs
+                        2010-2024', <em>Satista</em>. Available at:
+                        <a
+                            href="https://www.statista.com/statistics/272595/global-shipments-forecast-for-tablets-laptops-and-desktop-pcs/">https://www.statista.com/statistics/272595/global-shipments-forecast-for-tablets-laptops-and-desktop-pcs/</a>(Accessed:
+                        <time datetime="2021-05-08">8 May 2021</time>)
+                    </li>
+                    <li id="ref3">Majid A. (2021) 'Top 50 largest news websites in the world: Surge in traffic to Epoch
+                        Times and other right-wing sites', <em>Press Gazette</em>. Available at: <a
+                            href="https://www.pressgazette.co.uk/top-50-largest-news-websites-in-the-world-right-wing-outlets-see-biggest-growth/">https://www.pressgazette.co.uk/top-50-largest-news-websites-in-the-world-right-wing-outlets-see-biggest-growth/</a>
+                        (Accessed: <time datetime="2021-05-08">8 May 2021</time>)</li>
+                    <li id="ref1">Metev D. (2020) '39+ Smartphone Statistics You Should Know in 2020',
+                        <em>Review42</em>. Available at: <a
+                            href="https://review42.com/resources/smartphone-statistics/">https://review42.com/resources/smartphone-statistics/</a>
+                        (Accessed: <time datetime="2021-05-08">8 May 2021</time>)
+                    </li>
+                    <li id="ref4">Mohsin M. (2021) '10 TikTok Statistics That You Need To Know In 2021 [Infographic]',
+                        <em>Oberlo</em>. Available at: <a
+                            href="https://www.oberlo.com/blog/tiktok-statistics">https://www.oberlo.com/blog/tiktok-statistics</a>
+                        (Accessed: <time datetime="2021-05-08">8 May 2021</time>)
+                    </li>
+                    <li id="ref5">SteamDB (2021) <em>Steam Charts and Stats</em>. Available at: <a
+                            href="https://steamdb.info/graph/">https://steamdb.info/graph/</a> (Accessed: <time
+                            datetime="2021-05-08">8 May 2021</time>)</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <!-- The FOOTER of the webpage -->
+    <footer class="footer">
+        <a href="https://github.com/ryuuzu/">Utsav Gurmachhan Magar</a> 2021 &copy; All Rights Reserved
+    </footer>
+    <!-- Internal Script :D -->
+    <script>
+        // function to toggle the references
+        function toggleDrop() {
+            //This gets the element that needs to be dropped down
+            var dropDown = document.getElementById('dropdown');
+            // This checks the classname of the element
+            if (dropDown.className === "dropdown") {
+                // Adds dropped class if its only dropdown
+                dropDown.className += " dropped";
+            }
+            else {
+                // Else resets to dropdown
+                dropDown.className = "dropdown";
+            }
+        }
+    </script>
+</body>
+
+</html>

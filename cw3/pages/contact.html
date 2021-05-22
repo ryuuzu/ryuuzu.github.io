@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Puts a default character set for the whole webpage -->
+    <meta charset="UTF-8">
+    <!-- Provides support for old browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Author metadata -->
+    <meta name="author" content="Utsav Gurmachhan Magar">
+    <!-- Keywords for the search engine -->
+    <meta name="keyword" content="Islington Coursework InformationSystems Coursework3">
+    <!-- Helps to get the device width metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the external CSS from the css folder -->
+    <link rel="stylesheet" href="/cw3/css/style.css">
+    <!-- For getting the fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&family=Material+Icons&display=swap"
+        rel="stylesheet">
+    <!-- Title of the webpage -->
+    <title>UGM - Contact</title>
+    <!-- Loads the script files from the js folder -->
+    <script src="/cw3/js/main.js"></script>
+    <script src="/cw3/js/validation.js"></script>
+    <!-- Internal CSS -->
+    <style>
+        /* Different styling for the heading */
+        .heading h1 {
+            font-size: 25px;
+            text-align: center;
+            font-family: Krona One;
+        }
+
+        .contactForm {
+            /* Sets the font-size for the form contents */
+            font-size: 20px;
+        }
+
+        .buttons {
+            /* Makes sure the buttons take the full provided space */
+            width: 100%;
+            /* Font management for the buttons */
+            font-family: Poppins, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            /* Font size for the buttons */
+            font-size: 20px;
+            /* No border for the buttons */
+            border: none;
+            /* Text colour for the buttons */
+            color: #FCF7FF;
+            /* Pointer cursor when over the buttons */
+            cursor: pointer;
+            /* Background colour for the buttons */
+            background-color: #070707;
+        }
+
+        .buttons:hover {
+            /* Different background colour when hovering over the buttons */
+            background-color: #32373B;
+        }
+
+        .formTable {
+            /* Makes the form table take less space */
+            width: 80%;
+            /* Centralises the form table */
+            margin: auto;
+        }
+
+        /* Some basic responsiveness for the webpage on small screens */
+        @media screen and (max-width: 900px) {
+            .heading h1 {
+                font-size: 15px;
+            }
+
+            .contactForm {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The header of the webpage -->
+    <header>
+        <!-- The sticky top navigation bar -->
+        <div class="mainNavBar">
+            <!-- mainLogo that calls a rick roll when clicked on -->
+            <h1 class="mainLogo" style="cursor: pointer;" onclick="playrr()">UGM</h1>
+            <!-- menu icon that opens or closes the sidebar based on the parameter sent -->
+            <h1 class="navOpener" id="openButton"><span class="material-icons" onclick="toggleNav('on')"
+                    style="cursor: pointer;">menu</span></h1>
+        </div>
+        <!-- The actual navigation side bar -->
+        <nav class="sideBar" id="sideBar">
+            <!-- A close button to close the side bar after opening it -->
+            <a href="javascript:void();" class="closeButton" onclick="toggleNav('off')"><span class="material-icons"
+                    style="font-size: 30px;">close</span></a>
+            <!-- Link to the respective pages -->
+            <a href="/cw3/index.html" onclick="toggleNav('off')">Home</a>
+            <a href="/cw3/pages/blog.html" onclick="toggleNav('off')">Blog</a>
+            <a href="/cw3/pages/cv.html" onclick="toggleNav('off')">CV</a>
+            <a href="#" class="active" onclick="toggleNav('off')">Contact</a>
+            <a href="/cw3/pages/research.html" onclick="toggleNav('off')">Research</a>
+        </nav>
+    </header>
+    <!-- The main section of the webpage -->
+    <main>
+        <!-- Totally not a div that has a rick roll -->
+        <div class="notarickroll" id="notarickroll">
+            <h4 style="font-family: Krona One; color: black;">No Pausing the video! All you can do is reload now :v</h4>
+            <!-- Video tag that sources the video file from the assests folder -->
+            <video id="rr">
+                <source src="/cw3/assets/epicvideo.mp4" type="video/mp4">
+            </video><br>
+            <!-- Link to the original Never Gonna Give You Up video <3 -->
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="font-family: Krona One;">Rick Astley ❤</a>
+        </div>
+        <!-- Div with the actually main contents of the webpage. -->
+        <div class="container">
+            <!-- The HEADING part -->
+            <section class="heading">
+                <h1>Want to contact me?</h1>
+                Mail me at: <a href="mailto:utsavgurmachhan88728@gmail.com">utsavmagar88728@gmail.com</a><br>
+                Or fill this form and I will reach you out as soon as possible.
+            </section>
+            <!-- The contact form is here -->
+            <section class="contactForm">
+                <!-- The form begins here -->
+                <form name="contactForm" onsubmit="validate()">
+                    <table class="formTable">
+                        <!-- Input for first name -->
+                        <tr>
+                            <td><label for="fname">First Name:</label></td>
+                            <td><input type="text" name="fname" id="fname" placeholder="John"></td>
+                        </tr>
+                        <!-- Input for last name -->
+                        <tr>
+                            <td><label for="lname">Last Name:</label></td>
+                            <td><input type="text" name="lname" id="lname" placeholder="Doe"></t>
+                        </tr>
+                        <!-- Input for e-mail -->
+                        <tr>
+                            <td><label for="email">E-mail:</label></td>
+                            <td><input type="email" name="email" id="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must be a valid e-mail"
+                                    placeholder="john.doe@example.com">
+                            </td>
+                        </tr>
+                        <!-- Input for phone number -->
+                        <tr>
+                            <td><label for="phnum">Phone:</label></td>
+                            <td><input type="tel" name="phnum" id="phnum" placeholder="0011223344"></td>
+                        </tr>
+                        <!-- Rating for the website utilising the select option -->
+                        <tr>
+                            <td>
+                                <label for="rating">Rate this website:</label>
+                            </td>
+                            <td colspan="2">
+                                <select name="rating" id="rating">
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Eyyyy, yo. Rick roll check. -->
+                        <tr>
+                            <td>
+                                <label for="rickroll">Did you click on UGM?:</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="rickroll" id="rickroll" value="Yes">Yes
+                                <input type="radio" name="rickroll" id="rickroll" value="No" checked>No
+                            </td>
+                        </tr>
+                        <!-- Two buttons, either submit the form or reset the form -->
+                        <tr>
+                            <td><input type="submit" value="Submit" class="buttons"></td>
+                            <td><input type="reset" value="Reset" class="buttons"></td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- The FOOTER of the webpage -->
+    <footer class="footer">
+        <a href="https://github.com/ryuuzu/">Utsav Gurmachhan Magar</a> 2021 &copy; All Rights Reserved
+    </footer>
+</body>
+
+</html>

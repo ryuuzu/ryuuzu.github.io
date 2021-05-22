@@ -1,0 +1,207 @@
+html {
+    /* Makes the clicked scrolls smooth */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* To get the footer at the bottom. */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* To remove white bars in the page */
+    margin: 0;
+    /* Background colour for the whole page */
+    background-color: #C4CAD0;
+    /* Default text colour for the whole page */
+    color: #FCF7FF;
+}
+
+.mainNavBar {
+    /* Fixes the position of the top navigation bar. */
+    position: fixed;
+    /* Makes sure the top navigation bar is always on the top. */
+    top: 0;
+    /* Makes the top navigation bar stretch all over the screen horizontally. */
+    width: 100%;
+    /* Background colour for the top navigation bar. */
+    background-color: #32373B;
+    /* Nicer look for the navigation bar */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    /* Manage the scrolling in the navigation bar */
+    overflow: auto;
+    /* Font management for the navigation bar */
+    font-family: Krona One, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mainLogo {
+    /* Make the 'UGM' text float on the left */
+    float: left;
+}
+
+.navOpener {
+    /* Make the menu buttom float on the right */
+    float: right;
+}
+
+.mainLogo,
+.navOpener {
+    /* Setting the padding for the main navigation items. */
+    padding: 0 0.5em;
+    /* Setting the margin for the main navigation items. */
+    margin: 0.3em auto;
+}
+
+.navOpener span:hover,
+.mainLogo:hover,
+.footer a:hover,
+.sideBar a.active,
+.sideBar a:hover {
+    /* Hover transition time */
+    transition: 0.5s;
+    /* Hover color transition */
+    color: #878C8F;
+}
+
+.container {
+    /* Keeps the default cursor over the text */
+    cursor: default;
+    /* Align the text to justify */
+    text-align: justify;
+    /* Background colour for the main container */
+    background-color: #FCF7FF;
+    /* Make the container look rounded */
+    border-radius: 25px;
+    /* Separate the container from whole body */
+    margin: 10em 15em 5em;
+    /* Padding for the text inside the container */
+    padding: 0.5em 1.5em;
+    /* Text colour for the main container */
+    color: #070707;
+    /* Font management for the main container */
+    font-family: Poppins, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Font size for the main container */
+    font-size: 13px;
+    /* Make the container box look lifted. */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer {
+    /* Auto set the footer's top margin */
+    margin-top: auto;
+    /* Background colour for the footer */
+    background-color: #32373B;
+    /* Text colour for the footer */
+    color: #FCF7FF;
+    /* Nicer look for the footer */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    /* Align the footer text to center */
+    text-align: center;
+    /* Font management for the footer */
+    font-family: Poppins, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer a,
+.sideBar a {
+    /* Removes the decoration from the anchor tag */
+    text-decoration: none;
+    /* Colour of the text of the links */
+    color: #FCF7FF;
+}
+
+.sideBar {
+    /* Makes the sidebar cover the webpage completely */
+    height: 100%;
+    /* Hides the sidebar initially */
+    width: 0;
+    /* Sidebar stays in place */
+    position: fixed;
+    /* Makes the sidebar stay in front of other elements */
+    z-index: 1;
+    /* Makes the sidebar stick to the top of the webpage */
+    top: 0;
+    /* Defines the side of the sidebar. Replace right with left to make the sidebar appear on left. */
+    right: 0;
+    /* Background colour of the sidebar.s */
+    background-color: rgba(7, 7, 7, 0.8);
+    /* Disables horizontal scroll. */
+    overflow-x: hidden;
+    /* Places content 0.5em from the top */
+    padding-top: 0.5em;
+    /* Transition time for the sidebar to appear. */
+    transition: 1s;
+}
+
+.sideBar a {
+    /* Sets font size for the links in sidebar */
+    font-size: 15px;
+    /* Sets font family for the links in sidebar */
+    font-family: Krona One;
+    /* Places content awat from the each other */
+    padding: 8px 8px 8px 20px;
+    /* Displays the sidebar contents in block */
+    display: block;
+    /* Transition time for the hover effect */
+    transition: 0.5s;
+}
+
+.sideBar .closeButton {
+    /* Makes the close button appear on the left */
+    text-align: right;
+    /* Different padding for the close button */
+    padding: 0 0.5em 8px;
+}
+
+.notarickroll {
+    /* Fixes the position of the video container */
+    position: fixed;
+    /* Makes the video container stay on top */
+    z-index: 1;
+    /* Background colour for the video container */
+    background-color: rgba(252, 247, 255, 0.9);
+    /* Makes the video containter look rounded */
+    border-radius: 25px;
+    /* Nicer look for the video container */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* Aligns the text inside the video container to center */
+    text-align: center;
+    /* Sets the margin for the video container */
+    margin: 10em 20em;
+    /* Sets the padding for the video container */
+    padding: 2em;
+    /* Hides the video by default */
+    display: none;
+}
+
+#rr {
+    /* Sets the video to a constant width */
+    width: 70%;
+}
+
+#rr::-webkit-media-controls-panel {
+    /* Hides the video's controls */
+    display: none ! important;
+    /* Lowers the controls opacity */
+    opacity: 1 ! important;
+}
+
+/* Making the page responsive */
+@media screen and (max-width: 900px) {
+
+    /* Makes the sidebar bigger and more visible on smaller screens */
+    .sideBar {
+        padding-top: 15px;
+    }
+
+    .sideBar a {
+        font-size: 18px;
+    }
+
+    .notarickroll {
+        margin: 5em 10em;
+    }
+
+    .container {
+        font-size: 11px;
+        margin: 7.5em 5em 5em;
+    }
+}

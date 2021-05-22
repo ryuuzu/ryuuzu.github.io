@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Puts a default character set for the whole webpage -->
+    <meta charset="UTF-8">
+    <!-- Provides support for old browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Author metadata -->
+    <meta name="author" content="Utsav Gurmachhan Magar">
+    <!-- Keywords for the search engine -->
+    <meta name="keyword" content="Islington Coursework InformationSystems Coursework3">
+    <!-- Helps to get the device width metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the external CSS from the css folder -->
+    <link rel="stylesheet" href="/cw3/css/style.css">
+    <!-- For getting the fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&family=Material+Icons&display=swap"
+        rel="stylesheet">
+    <!-- Title of the webpage -->
+    <title>UGM - CV</title>
+    <!-- Loads the script file from the js folder -->
+    <script src="/cw3/js/main.js"></script>
+    <!-- Internal CSS -->
+    <style>
+        table {
+            /* Makes sure the tables takes full width */
+            width: 100%;
+            /* Sets the colour for text inside the table to black */
+            color: black;
+            /* Aligns the text inside the table to left */
+            text-align: left;
+            /* Sets the font for the text inside the table to 15px */
+            font-size: 15px;
+        }
+
+        td {
+            /* Adds padding for each table cell */
+            padding: 0 5px;
+        }
+
+        table a {
+            /* Removes decoration (underline) from the anchor tags */
+            text-decoration: none;
+            /* Sets the colour for text inside the anchor tags back to black */
+            color: black;
+        }
+
+        strong {
+            /* Increases the font size for strong texts */
+            font-size: 18px;
+        }
+
+        .otherTables td {
+            /* Padding for cells of sub-table inside table */
+            padding: 0;
+        }
+
+        .educationYear {
+            /* Different width for the class */
+            width: 20%;
+        }
+
+        .courseName {
+            /* Different font-size for the class */
+            font-size: 18px;
+        }
+
+        .skill,
+        .language {
+            /* Different width and font-size for the class */
+            width: 35%;
+            font-size: 13px;
+        }
+
+        .longestRow {
+            /* Different font-size and background colour for the longest row with rowspan value of 5
+            Helps the row to stand out as it contains some personal details and skills */
+            font-size: 13px;
+            background-color: #878c8f9a;
+        }
+
+        .rating {
+            /* Makes the rating appear on the right */
+            text-align: right;
+            /* Makes the rating font larger */
+            font-size: 18px;
+        }
+
+        .anotherTitle {
+            /* Makes the another title larger */
+            font-size: 20px;
+            /* Removes bottom padding */
+            padding-bottom: 0;
+        }
+
+        .title {
+            /* Makes the size of the title larger */
+            font-size: 30px;
+            /* Aligns the title on the center */
+            text-align: center;
+            /* Makes the top corners of the title round */
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            /* Sets the background colour of the title */
+            background-color: #070707da;
+            /* Sets the text colour of the title to make it visible */
+            color: #FCF7FF;
+            /* Sets the padding for the title */
+            padding: 20px 20px;
+        }
+
+        .download {
+            /* Aligns the download text in the center */
+            text-align: center;
+            /* Removes the padding from the download button */
+            padding: 0;
+            /* Removes the border from download button */
+            border: none;
+            /* Sets the color for the text inside the download button */
+            color: #FCF7FF;
+            /* Makes sure the cursor is pointer (Pointing hand) when over the download button */
+            cursor: pointer;
+        }
+
+        .downloadtd,
+        .download {
+            /* Sets the background color for the download button */
+            background-color: #32373B;
+            /* Makes the bottom corners of the download button round */
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+
+        .downloadtd:hover,
+        .download:hover {
+            /* Makes the background colour of the download button change on hover */
+            background-color: #070707;
+        }
+
+        /* Some basic responsiveness for the webpage on small screens */
+        @media screen and (max-width: 900px) {
+            table {
+                font-size: 13px;
+            }
+
+            .educationYear strong {
+                font-size: 13px;
+            }
+
+            strong,
+            .rating,
+            .courseName {
+                font-size: 15px;
+            }
+
+            .longestRow,
+            .skill,
+            .language,
+            em {
+                font-size: 11px;
+            }
+
+            .anotherTitle {
+                font-size: 18px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The header of the webpage -->
+    <header>
+        <!-- The sticky top navigation bar -->
+        <div class="mainNavBar">
+            <!-- mainLogo that calls a rick roll when clicked on -->
+            <h1 class="mainLogo" style="cursor: pointer;" onclick="playrr()">UGM</h1>
+            <!-- menu icon that opens or closes the sidebar based on the parameter sent -->
+            <h1 class="navOpener" id="openButton"><span class="material-icons" onclick="toggleNav('on')"
+                    style="cursor: pointer;">menu</span></h1>
+        </div>
+        <!-- The actual navigation side bar -->
+        <nav class="sideBar" id="sideBar">
+            <!-- A close button to close the side bar after opening it -->
+            <a href="javascript:void();" class="closeButton" onclick="toggleNav('off')"><span class="material-icons"
+                    style="font-size: 30px;">close</span></a>
+            <!-- Link to the respective pages -->
+            <a href="/cw3/index.html" onclick="toggleNav('off')">Home</a>
+            <a href="/cw3/pages/blog.html" onclick="toggleNav('off')">Blog</a>
+            <a href="#" class="active" onclick="toggleNav('off')">CV</a>
+            <a href="/cw3/pages/contact.html" onclick="toggleNav('off')">Contact</a>
+            <a href="/cw3/pages/research.html" onclick="toggleNav('off')">Research</a>
+        </nav>
+    </header>
+    <!-- The main section of the webpage -->
+    <main>
+        <!-- Totally not a div that has a rick roll -->
+        <div class="notarickroll" id="notarickroll">
+            <!-- Heading for the rick roll -->
+            <h4 style="font-family: Krona One; color: black;">No Pausing the video! All you can do is reload now :v</h4>
+            <!-- Video tag that sources the video file from the assests folder -->
+            <video id="rr">
+                <source src="/cw3/assets/epicvideo.mp4" type="video/mp4">
+            </video><br>
+            <!-- Link to the original Never Gonna Give You Up video <3 -->
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="font-family: Krona One;">Rick Astley ❤</a>
+        </div>
+        <!-- Div with the actually main contents of the webpage. -->
+        <div class="container">
+            <!-- Table where the CV is designed. -->
+            <table>
+                <!-- The title i.e. "Curriculum Vitae" -->
+                <tr>
+                    <th class="title" colspan="2">Curriculum Vitae</th>
+                </tr>
+                <!-- Row with the short summary and some details -->
+                <tr>
+                    <td style="width: 65%;">Enthusiastic undergraduate student eager to contribute to team success.
+                        Motivated to learn, grow and excel in the Tech industry</td>
+                    <td rowspan="5" class="longestRow">
+                        <strong>Personal</strong><br>
+                        <hr>
+                        <strong>Name</strong><br>
+                        Utsav Gurmachhan Magar<br>
+                        <strong>Address</strong><br>
+                        Mahalaxmi, Lalitpur<br>
+                        Bagmati Pradesh, Nepal<br>
+                        <strong>Phone</strong><br>
+                        <a href="tel:9862957119">+977-9862957119</a><br>
+                        <strong>E-mail</strong><br>
+                        <a href="mailto:utsavmagar88728@gmail.com">utsavmagar88728@gmail.com</a><br>
+                        <br>
+                        <strong>Skills
+                            <hr>
+                        </strong>
+                        <table class="otherTables">
+                            <tr>
+                                <td class="skill">Voice Acting</td>
+                                <td class="rating">❶❷❸④⑤</td>
+                            </tr>
+                            <tr>
+                                <td class="skill">Communicating</td>
+                                <td class="rating">❶❷❸④⑤</td>
+                            </tr>
+                        </table>
+                        <strong>Interests</strong>
+                        <hr>
+                        Programming, Singing, Voluntary Work<br>
+                        <br>
+                        <strong>Languages</strong>
+                        <hr>
+                        <table class="otherTables">
+                            <tr>
+                                <td class="language">Nepali</td>
+                                <td class="rating">❶❷❸❹❺</td>
+                            </tr>
+                            <tr>
+                                <td class="language">English</td>
+                                <td class="rating">❶❷❸❹⑤</td>
+                            </tr>
+                            <tr>
+                                <td class="language">Urdu</td>
+                                <td class="rating">❶❷❸④⑤</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Row with other details -->
+                <tr>
+                    <td>
+                        <!-- Table with Education Details -->
+                        <table class="otherTables">
+                            <tr>
+                                <th colspan="2" class="anotherTitle">Education
+                                    <hr>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="educationYear"><strong>2021-03 -<br>Current</strong></td>
+                                <td>
+                                    <strong class="courseName">B. Sc. (Hons.): Computing</strong><br>
+                                    <em>Islington College - Kamalmarg, Kamalpokhari, Kathmandu</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="educationYear"><strong>2018-06 -<br>2020-12</strong></td>
+                                <td>
+                                    <strong class="courseName">SLC(+2): Science</strong><br>
+                                    <em>Moonlight Higher Secondary School - Kumaripati, Lalitpur, Nepal</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="educationYear"><strong>2014-03 -<br>2018-03</strong></td>
+                                <td>
+                                    <strong class="courseName">SEE: Science</strong><br>
+                                    <em>Nightingale International Secondary School - Kupondole, Lalitpur, Nepal</em>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Another Row with other details -->
+                <tr>
+                    <td>
+                        <strong class="anotherTitle">Extracurricular Activities</strong>
+                        <hr>
+                        <ul style="padding-top: 0; margin-top: 0;">
+                            <li>Achieved the first position in Intra-school Essay Writing in 2020.</li>
+                            <li>Participated in English Dramas in school.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- Another another Row with other details -->
+                <tr>
+                    <td>
+                        <strong class="anotherTitle">References</strong>
+                        <hr>
+                        References available on request.
+                    </td>
+                </tr>
+                <tr style="height: 100%;">
+                    <td>
+                        <!-- Empty cell to balance the columns contents. -->
+                    </td>
+                </tr>
+                <!-- The DOWNLOAD Button -->
+                <tr>
+                    <td colspan="2" class="downloadtd">
+                        <button class="download" style="width: 100%;" onclick="openCVpdf()"><span
+                                class="material-icons">file_download</span> <span
+                                style="font-size: 24px; font-family: Poppins;">Download CV</span></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <!-- The FOOTER of the webpage -->
+    <footer class="footer">
+        <a href="https://github.com/ryuuzu/">Utsav Gurmachhan Magar</a> 2021 &copy; All Rights Reserved
+    </footer>
+    <!-- Internal Script :D -->
+    <script>
+        // Opens the PDF file of the CV when the button is clicked
+        function openCVpdf() {
+            window.open("/cw3/assets/cv.pdf")
+        }
+    </script>
+</body>
+
+</html>

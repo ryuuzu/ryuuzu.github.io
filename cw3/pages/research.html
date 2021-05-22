@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Puts a default character set for the whole webpage -->
+    <meta charset="UTF-8">
+    <!-- Provides support for old browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Author metadata -->
+    <meta name="author" content="Utsav Gurmachhan Magar">
+    <!-- Keywords for the search engine -->
+    <meta name="keyword" content="Islington Coursework InformationSystems Coursework3">
+    <!-- Helps to get the device width metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the external CSS from the css folder -->
+    <link rel="stylesheet" href="/cw3/css/style.css">
+    <!-- For getting the fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&family=Material+Icons&display=swap"
+        rel="stylesheet">
+    <!-- Title of the webpage -->
+    <title>UGM - Research</title>
+    <!-- Loads the script file from the js folder -->
+    <script src="/cw3/js/main.js"></script>
+    <!-- Internal CSS -->
+    <style>
+        .intro {
+            /* Sets font size for the introduction part */
+            font-size: 15px !important;
+        }
+
+        .heading {
+            /* Top padding for the main heading*/
+            padding-top: 0.5em;
+            /* Font-size for the heading */
+            font-size: 20px;
+        }
+
+        .heading,
+        .intro {
+            /* Centralises the content inside the container */
+            margin: auto !important;
+        }
+
+        .headings {
+            /* Centralises the heading of each research. */
+            margin: auto;
+            /* Aligns the text to the center */
+            text-align: center;
+            /* Font management for the heading */
+            font-family: Krona One, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        section {
+            /* Gap before and after each research section */
+            margin: 2em auto;
+            /* Font size for the research contents */
+            font-size: 14px;
+        }
+
+        .imageContainer {
+            /* Flex display for the images */
+            display: flex;
+            /* Makes the images display in a row */
+            flex-direction: row;
+            /* Removes the horizontal scroll inside the flex */
+            overflow-x: hidden;
+        }
+
+        figcaption {
+            /* Font size for the figure caption */
+            font-size: 12px;
+        }
+
+        .half {
+            /* Divides the space evenly for two images */
+            flex: 50%;
+            /* Margin around the images */
+            margin: 1em;
+        }
+
+        .images {
+            /* Makes the image borders rounded */
+            border-radius: 10px;
+            /* Makes the image appear lifted */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+            /* Makes sure the images take the full available space */
+            width: 100%;
+        }
+
+        /* Some basic responsiveness for the webpage on small screens */
+        @media screen and (max-width: 900px) {
+            .intro {
+                font-size: 14px !important;
+            }
+
+            .imageContainer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The header of the webpage -->
+    <header>
+        <!-- The sticky top navigation bar -->
+        <div class="mainNavBar">
+            <!-- mainLogo that calls a rick roll when clicked on -->
+            <h1 class="mainLogo" style="cursor: pointer;" onclick="playrr()">UGM</h1>
+            <!-- menu icon that opens or closes the sidebar based on the parameter sent -->
+            <h1 class="navOpener" id="openButton"><span class="material-icons" onclick="toggleNav('on')"
+                    style="cursor: pointer;">menu</span></h1>
+        </div>
+        <!-- The actual navigation side bar -->
+        <nav class="sideBar" id="sideBar">
+            <!-- A close button to close the side bar after opening it -->
+            <a href="javascript:void();" class="closeButton" onclick="toggleNav('off')"><span class="material-icons"
+                    style="font-size: 30px;">close</span></a>
+            <!-- Link to the respective pages -->
+            <a href="/cw3/index.html" onclick="toggleNav('off')">Home</a>
+            <a href="/cw3/pages/blog.html" onclick="toggleNav('off')">Blog</a>
+            <a href="/cw3/pages/cv.html" onclick="toggleNav('off')">CV</a>
+            <a href="/cw3/pages/contact.html" onclick="toggleNav('off')">Contact</a>
+            <a href="#" class="active" onclick="toggleNav('off')">Research</a>
+        </nav>
+    </header>
+    <!-- The main section of the webpage -->
+    <main>
+        <!-- Totally not a div that has a rick roll -->
+        <div class="notarickroll" id="notarickroll">
+            <h4 style="font-family: Krona One; color: black;">No Pausing the video! All you can do is reload now :v</h4>
+            <!-- Video tag that sources the video file from the assests folder -->
+            <video id="rr">
+                <source src="/cw3/assets/epicvideo.mp4" type="video/mp4">
+            </video><br>
+            <!-- Link to the original Never Gonna Give You Up video <3 -->
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="font-family: Krona One;">Rick Astley ❤</a>
+        </div>
+        <!-- Div with the actually main contents of the webpage. -->
+        <div class="container">
+            <!-- The HEADING part -->
+            <section class="heading">
+                <h1 class="headings">Research</h1>
+            </section>
+            <!-- The INTRODUCTION part -->
+            <section class="intro">
+                <p>
+                    This is the research section of the page. It contains screenshots from various other sites that
+                    inspired this portfolio to be designed in this way. The concepts were taken from these sites while
+                    the coding was figured out with some research and experimentation.<br>
+                    <!-- Nothing is perfect :D -->
+                    <strong style="font-size: 11px;">Note: You might see a few changes in the HTML texts that were
+                        applied after this research page. You can also click on the images to go to the site.</strong>
+                </p>
+            </section>
+            <!-- The RESEARCH NO. 1 -->
+            <section class="rs1" id="rs1">
+                <h3 class="headings">Age Counter</h3>
+                <div class="imageContainer">
+                    <figure class="half">
+                        <a href="https://ottomated.net/" target="_blank"><img
+                                src="/cw3/assets/researchGIFs/agecounter-research.gif" alt="Age Counter Research GIF"
+                                class="images"></a>
+                        <figcaption>Age Counter - Research</figcaption>
+                    </figure>
+                    <figure class="half">
+                        <a href="../index.html" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/agecounter-ugm.gif" alt="Age Counter Implementation GIF"
+                                class="images"></a>
+                        <figcaption>Age Counter - Implementation</figcaption>
+                    </figure>
+                </div>
+                To implement this on the website, a function was defined that constantly updates the age container at
+                the speed
+                of 10 milliseconds. This was one of the easiest solutions with the help of some JavaScript.
+            </section>
+            <hr>
+            <!-- The RESEARCH NO. 2 -->
+            <section class="rs2" id="rs2">
+                <h3 class="headings">Contact Form</h3>
+                <div class="imageContainer">
+                    <figure class="half">
+                        <a href="https://www.w3schools.com/howto/howto_css_contact_form.asp" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/contact-research.png" alt="Contact Form Research Image"
+                                class="images"></a>
+                        <figcaption>Contact Form - Research</figcaption>
+                    </figure>
+                    <figure class="half">
+                        <a href="/pages/contact.html" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/contact-ugm.png" alt="Contact Form Implementation Image"
+                                class="images"></a>
+                        <figcaption>Contact Form - Implementation</figcaption>
+                    </figure>
+                </div>
+                This implementation was the easiest one compared to other ones here. The form elements were easily
+                aligned with the help of &lt;table&gt;...&lt;/table&gt; tags.
+            </section>
+            <hr>
+            <!-- The RESEARCH NO. 3 -->
+            <section class="rs3" id="rs3">
+                <h3 class="headings">Dropdown</h3>
+                <div class="imageContainer">
+                    <figure class="half">
+                        <a href="https://www.w3schools.com/howto/howto_js_dropdown.asp" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/dropdown-research.gif" alt="Dropdown Research GIF"
+                                class="images"></a>
+                        <figcaption>Dropdown - Research</figcaption>
+                    </figure>
+                    <figure class="half">
+                        <a href="/pages/blog.html#ddbutton" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/dropdown-ugm.gif" alt="Dropdown Implemention GIF"
+                                class="images"></a>
+                        <figcaption>Dropdown - Implementation</figcaption>
+                    </figure>
+                </div>
+                This was implemented by defining a JavaScript function to add a class that has the dropdown properties
+                to the dropdown content.
+            </section>
+            <hr>
+            <!-- The RESEARCH NO. 4 -->
+            <section class="rs4" id="rs4">
+                <h3 class="headings">Sidebar</h3>
+                <div class="imageContainer">
+                    <figure class="half">
+                        <a href="https://mattmski.net/" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/sidebar-research.gif" alt="Sidebar Research GIF"
+                                class="images"></a>
+                        <figcaption>Sidebar - Research</figcaption>
+                    </figure>
+                    <figure class="half">
+                        <a href="/pages/blog.html" target="_blank">
+                            <img src="/cw3/assets/researchGIFs/sidebar-ugm.gif" alt="Sidebar Implementation GIF"
+                                class="images"></a>
+                        <figcaption>Sidebar - Implementation</figcaption>
+                    </figure>
+                </div>
+                This was implemented with the help of CSS and a little touch of JavaScript. Everything here was mostly
+                CSS and JavaScript was used to change the width of the sidebar.
+            </section>
+            <hr>
+            <!-- The RESEARCH NO. 5 -->
+            <section class="rs5" id="rs5">
+                <h3 class="headings">Sticky Navigation Bar</h3>
+                <div class="imageContainer">
+                    <figure class="half">
+                        <a href="https://www.w3schools.com/howto/howto_js_navbar_sticky.asp" target="_blank"><img
+                                src="/cw3/assets/researchGIFs/stickynav-research.gif"
+                                alt="Sticky Navigation Bar Research GIF" class="images"></a>
+                        <figcaption>Sticky Navigation Bar - Research</figcaption>
+                    </figure>
+                    <figure class="half">
+                        <a href="/pages/blog.html" target="_blank"><img src="/cw3/assets/researchGIFs/stickynav-ugm.gif"
+                                alt="Sticky Navigation Bar Implementation GIF" class="images"></a>
+                        <figcaption>Sticky Navigation Bar - Implementation</figcaption>
+                    </figure>
+                </div>
+                To implement this on the website, the top navigation bar was styled with a few CSS styles. This was also
+                pretty easy to implement as it required only few CSS were required.
+            </section>
+        </div>
+    </main>
+    <!-- The FOOTER of the webpage -->
+    <footer class="footer">
+        <a href="https://github.com/ryuuzu/">Utsav Gurmachhan Magar</a> 2021 &copy; All Rights Reserved
+    </footer>
+</body>
+
+</html>
